@@ -14,6 +14,10 @@ data <- read_csv("Data/Tenured.csv")
 
 Get the top 50 most tenured names, removing duplicate names
 
+Get the top 75 with duplicates
+
+Get only the list of duplicates
+
 ```{r}
 DirectorList <- data %>%
   arrange(desc(YearsOnBoard)) %>%
@@ -31,4 +35,13 @@ onlyDuplicates <- withDuplicates %>%
 
 ```
 
-<!-- test -->
+Get gender breakdown in the top 50
+Obtain average age of the top 50
+
+
+```{r}
+GenderBreakdown <- DirectorList %>% count(Gender)
+AvgAge <- DirectorList %>% summarise(mean(`Age_As_ Of_Dec_31_2024`, na.rm = TRUE))
+AvgTenure <- DirectorList %>% summarise(mean(`YearsOnBoard`, na.rm = TRUE))
+
+```
