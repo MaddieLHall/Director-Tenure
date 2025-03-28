@@ -43,5 +43,5 @@ Obtain average age of the top 50
 GenderBreakdown <- DirectorList %>% count(Gender)
 AvgAge <- DirectorList %>% summarise(mean(`Age_As_ Of_Dec_31_2024`, na.rm = TRUE))
 AvgTenure <- DirectorList %>% summarise(mean(`YearsOnBoard`, na.rm = TRUE))
-Legg <- DirectorList %>%  arrange(desc(FundBoard)) %>% group_by(FundBoard)
+FundGroups <- DirectorList %>%  arrange(desc(FundBoard)) %>% group_by(FundBoard)
 ```
