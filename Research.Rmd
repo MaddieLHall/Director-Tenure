@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+
+data <- read_csv("Data/Tenured.csv")
+
+
+```
+
+Get the top 50 most tenured names, removing duplicate names
+
+```{r}
+DirectorList <- data %>%
+  arrange(desc(YearsOnBoard)) %>%
+  distinct(Name, .keep_all = TRUE) %>%
+  slice_head(n = 50)
+
+withDuplicates <- data %>%
+  arrange(desc(YearsOnBoard)) %>%
+  slice_head(n = 75)
+
+onlyDuplicates <- withDuplicates %>% 
+  group_by(Name) %>%
+  filter(n() > 1) %>%
+  ungroup()
+
+```
+
