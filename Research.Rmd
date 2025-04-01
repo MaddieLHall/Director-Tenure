@@ -24,6 +24,9 @@ DirectorList <- data %>%
   distinct(Name, .keep_all = TRUE) %>%
   slice_head(n = 50)
 
+DirectorList <- DirectorList %>% select(-DirectorId, -ComplexId, -FundBoardId, -blank, -blankik)
+
+
 withDuplicates <- data %>%
   arrange(desc(YearsOnBoard)) %>%
   slice_head(n = 75)
@@ -45,10 +48,19 @@ AvgTenure <- DirectorList %>% summarise(mean(`YearsOnBoard`, na.rm = TRUE))
 FundGroups <- DirectorList %>%  arrange(desc(FundBoard)) %>% group_by(FundBoard)
 ```
 
-Creates list of everyone affiliated with an audit committee and then a breakdown of each in AuditTable
+Creates list of everyone affiliated with a committee and then a breakdown of each in a table. Also does the same for the chairs/board positions
 ```{r}
+
+ChairofBoard <- DirectorList %>% filter(!is.na(Position_With_Fund) & Position_With_Fund !="")
+ChairTable <- DirectorList %>%  count(Position_With_Fund)
+  
 AuditCommittee <- DirectorList %>% filter(!is.na(Audit_Committee) & Audit_Committee != "")
 AuditTable  <- DirectorList %>% count(Audit_Committee)
 # AuditCommittee <- AuditCommittee %>% slice(-34)
 
+NGCommittee <- DirectorList %>%  filter(!is.na(Nominating_Governance_Committee) & Nominating_Governance_Committee != "")
+NGTable <- DirectorList %>% count(Nominating_Governance_Committee)
+
+ContractCommittee <- DirectorList %>%  filter(!is.na(Contract_Committee) & Contract_Committee != "")
+ContractTable <- DirectorList %>% count(Contract_Committee)
 ```
