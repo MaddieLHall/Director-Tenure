@@ -1754,31 +1754,20 @@ display: none;
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5cbmRhdGEgPC0gcmVhZF9jc3YoXCJEYXRhL1RlbnVyZWQuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)
+
+data &lt;- read_csv(&quot;Data/Tenured.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoi4pSA4pSAIEF0dGFjaGluZyBjb3JlIHRpZHl2ZXJzZSBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDIuMC4wIOKUgOKUgFxu4pyUIGRwbHlyICAgICAxLjEuNCAgICAg4pyUIHJlYWRyICAgICAyLjEuNVxu4pyUIGZvcmNhdHMgICAxLjAuMCAgICAg4pyUIHN0cmluZ3IgICAxLjUuMVxu4pyUIGdncGxvdDIgICAzLjUuMSAgICAg4pyUIHRpYmJsZSAgICAzLjIuMVxu4pyUIGx1YnJpZGF0ZSAxLjkuMyAgICAg4pyUIHRpZHlyICAgICAxLjMuMVxu4pyUIHB1cnJyICAgICAxLjAuMiAgICAg4pSA4pSAIENvbmZsaWN0cyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlX2NvbmZsaWN0cygpIOKUgOKUgFxu4pyWIGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbuKcliBkcGx5cjo6bGFnKCkgICAgbWFza3Mgc3RhdHM6OmxhZygpXG7ihLkgVXNlIHRoZSBcdTAwMWJdODs7aHR0cDovL2NvbmZsaWN0ZWQuci1saWIub3JnL1x1MDAwN2NvbmZsaWN0ZWQgcGFja2FnZVx1MDAxYl04OztcdTAwMDcgdG8gZm9yY2UgYWxsIGNvbmZsaWN0cyB0byBiZWNvbWUgZXJyb3JzXG4ifQ== -->
-<pre><code>── Attaching core tidyverse packages ────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     ── Conflicts ──────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YSA8LSByZWFkX2NzdihcIkRhdGEvVGVudXJlZC5jc3ZcIilcbmBgYCJ9 -->
-<pre class="r"><code>data &lt;- read_csv(&quot;Data/Tenured.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTmV3IG5hbWVzOldhcm5pbmc6IE9uZSBvciBtb3JlIHBhcnNpbmcgaXNzdWVzLCBjYWxsIGBwcm9ibGVtcygpYCBvbiB5b3VyIGRhdGEgZnJhbWUgZm9yIGRldGFpbHMsIGUuZy46XG4gIGRhdCA8LSB2cm9vbSguLi4pXG4gIHByb2JsZW1zKGRhdClSb3dzOiAyMTIzIENvbHVtbnM6IDIzMuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAgKDU3KTogRnVuZEJvYXJkLCBKb2luZWRfSW5fTWVyZ2VyLCBOYW1lLCBGaXJzdF9OYW1lLCBNaWRkbGVfTmFtZSwgTGFzdF9OYW1lLCBMaW5rX3RvX0ZpbGluZzIwMjMsIFN1ZmZpeCwgRGlyZS4uLlxuZGJsICAoMTQpOiBBZ2VfQXNfIE9mX0RlY18zMV8yMDI0LCBZZWFyc09uQm9hcmQsIERPQl9BZ2VfMjAyMiwgRE9CX0VzdGltYXRlLCBJbmRlcGVuZGVuY2VfQ29kZSwgU3RhcnRfRGF0ZV9PcmdpbmFsLi4uXG5sZ2wgKDE2MSk6IERpcmVjdG9ySWQsIENvbXBsZXhJZCwgRnVuZEJvYXJkSWQsIGFkYSwgZGRhZCwgLi4uNzcsIC4uLjc4LCAuLi43OSwgLi4uODAsIC4uLjgxLCAuLi44MiwgLi4uODMsIC4uLjg0LCAuLi5cbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
-<pre><code>New names:Warning: One or more parsing issues, call `problems()` on your data frame for details, e.g.:
+<!-- rnb-output-begin eyJkYXRhIjoiTmV3IG5hbWVzOldhcm5pbmc6IE9uZSBvciBtb3JlIHBhcnNpbmcgaXNzdWVzLCBjYWxsIGBwcm9ibGVtcygpYCBvbiB5b3VyIGRhdGEgZnJhbWUgZm9yXG5kZXRhaWxzLCBlLmcuOlxuICBkYXQgPC0gdnJvb20oLi4uKVxuICBwcm9ibGVtcyhkYXQpUm93czogMjk3OSBDb2x1bW5zOiAyMzHilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiLFwiXG5jaHIgICg1OSk6IEZ1bmRCb2FyZCwgSm9pbmVkX0luX01lcmdlciwgTmFtZSwgRmlyc3RfTmFtZSwgTWlkZGxlX05hLi4uXG5kYmwgICgxMSk6IERPQl9BZ2VfMjAyMiwgRE9CX0VzdGltYXRlLCBBZ2VfQXNfIE9mX0RlY18zMV8yMDI0LCBJbmRlLi4uXG5sZ2wgKDE2MSk6IERpcmVjdG9ySWQsIENvbXBsZXhJZCwgRnVuZEJvYXJkSWQsIGJsYW5rLCBibGFua2lrLCAuLi43Li4uXG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<pre><code>New names:Warning: One or more parsing issues, call `problems()` on your data frame for
+details, e.g.:
   dat &lt;- vroom(...)
-  problems(dat)Rows: 2123 Columns: 232── Column specification ──────────────────────────────────────────────────────────────────────────────────────────────
+  problems(dat)Rows: 2979 Columns: 231── Column specification ───────────────────────────────────────────────
 Delimiter: &quot;,&quot;
-chr  (57): FundBoard, Joined_In_Merger, Name, First_Name, Middle_Name, Last_Name, Link_to_Filing2023, Suffix, Dire...
-dbl  (14): Age_As_ Of_Dec_31_2024, YearsOnBoard, DOB_Age_2022, DOB_Estimate, Independence_Code, Start_Date_Orginal...
-lgl (161): DirectorId, ComplexId, FundBoardId, ada, ddad, ...77, ...78, ...79, ...80, ...81, ...82, ...83, ...84, ...
+chr  (59): FundBoard, Joined_In_Merger, Name, First_Name, Middle_Na...
+dbl  (11): DOB_Age_2022, DOB_Estimate, Age_As_ Of_Dec_31_2024, Inde...
+lgl (161): DirectorId, ComplexId, FundBoardId, blank, blankik, ...7...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <!-- rnb-output-end -->
@@ -1811,15 +1800,27 @@ onlyDuplicates &lt;- withDuplicates %&gt;%
 50</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuR2VuZGVyQnJlYWtkb3duIDwtIERpcmVjdG9yTGlzdCAlPiUgY291bnQoR2VuZGVyKVxuQXZnQWdlIDwtIERpcmVjdG9yTGlzdCAlPiUgc3VtbWFyaXNlKG1lYW4oYEFnZV9Bc18gT2ZfRGVjXzMxXzIwMjRgLCBuYS5ybSA9IFRSVUUpKVxuQXZnVGVudXJlIDwtIERpcmVjdG9yTGlzdCAlPiUgc3VtbWFyaXNlKG1lYW4oYFllYXJzT25Cb2FyZGAsIG5hLnJtID0gVFJVRSkpXG5MZWdnIDwtIERpcmVjdG9yTGlzdCAlPiUgIGFycmFuZ2UoZGVzYyhGdW5kQm9hcmQpKSAlPiUgZ3JvdXBfYnkoRnVuZEJvYXJkKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuR2VuZGVyQnJlYWtkb3duIDwtIERpcmVjdG9yTGlzdCAlPiUgY291bnQoR2VuZGVyKVxuQXZnQWdlIDwtIERpcmVjdG9yTGlzdCAlPiUgc3VtbWFyaXNlKG1lYW4oYEFnZV9Bc18gT2ZfRGVjXzMxXzIwMjRgLCBuYS5ybSA9IFRSVUUpKVxuQXZnVGVudXJlIDwtIERpcmVjdG9yTGlzdCAlPiUgc3VtbWFyaXNlKG1lYW4oYFllYXJzT25Cb2FyZGAsIG5hLnJtID0gVFJVRSkpXG5GdW5kR3JvdXBzIDwtIERpcmVjdG9yTGlzdCAlPiUgIGFycmFuZ2UoZGVzYyhGdW5kQm9hcmQpKSAlPiUgZ3JvdXBfYnkoRnVuZEJvYXJkKVxuYGBgIn0= -->
 <pre class="r"><code>GenderBreakdown &lt;- DirectorList %&gt;% count(Gender)
 AvgAge &lt;- DirectorList %&gt;% summarise(mean(`Age_As_ Of_Dec_31_2024`, na.rm = TRUE))
 AvgTenure &lt;- DirectorList %&gt;% summarise(mean(`YearsOnBoard`, na.rm = TRUE))
-Legg &lt;- DirectorList %&gt;%  arrange(desc(FundBoard)) %&gt;% group_by(FundBoard)</code></pre>
+FundGroups &lt;- DirectorList %&gt;%  arrange(desc(FundBoard)) %&gt;% group_by(FundBoard)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Creates list of everyone affiliated with an audit committee and then
+a breakdown of each in AuditTable</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQXVkaXRDb21taXR0ZWUgPC0gRGlyZWN0b3JMaXN0ICU+JSBmaWx0ZXIoIWlzLm5hKEF1ZGl0X0NvbW1pdHRlZSkgJiBBdWRpdF9Db21taXR0ZWUgIT0gXCJcIilcbkF1ZGl0VGFibGUgIDwtIERpcmVjdG9yTGlzdCAlPiUgY291bnQoQXVkaXRfQ29tbWl0dGVlKVxuIyBBdWRpdENvbW1pdHRlZSA8LSBBdWRpdENvbW1pdHRlZSAlPiUgc2xpY2UoLTM0KVxuXG5gYGAifQ== -->
+<pre class="r"><code>AuditCommittee &lt;- DirectorList %&gt;% filter(!is.na(Audit_Committee) &amp; Audit_Committee != &quot;&quot;)
+AuditTable  &lt;- DirectorList %&gt;% count(Audit_Committee)
+# AuditCommittee &lt;- AuditCommittee %&gt;% slice(-34)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKCmRhdGEgPC0gcmVhZF9jc3YoIkRhdGEvVGVudXJlZC5jc3YiKQoKCmBgYAoKR2V0IHRoZSB0b3AgNTAgbW9zdCB0ZW51cmVkIG5hbWVzLCByZW1vdmluZyBkdXBsaWNhdGUgbmFtZXMKCkdldCB0aGUgdG9wIDc1IHdpdGggZHVwbGljYXRlcwoKR2V0IG9ubHkgdGhlIGxpc3Qgb2YgZHVwbGljYXRlcwoKYGBge3J9CkRpcmVjdG9yTGlzdCA8LSBkYXRhICU+JQogIGFycmFuZ2UoZGVzYyhZZWFyc09uQm9hcmQpKSAlPiUKICBkaXN0aW5jdChOYW1lLCAua2VlcF9hbGwgPSBUUlVFKSAlPiUKICBzbGljZV9oZWFkKG4gPSA1MCkKCndpdGhEdXBsaWNhdGVzIDwtIGRhdGEgJT4lCiAgYXJyYW5nZShkZXNjKFllYXJzT25Cb2FyZCkpICU+JQogIHNsaWNlX2hlYWQobiA9IDc1KQoKb25seUR1cGxpY2F0ZXMgPC0gd2l0aER1cGxpY2F0ZXMgJT4lIAogIGdyb3VwX2J5KE5hbWUpICU+JQogIGZpbHRlcihuKCkgPiAxKSAlPiUKICB1bmdyb3VwKCkKCmBgYAoKR2V0IGdlbmRlciBicmVha2Rvd24gaW4gdGhlIHRvcCA1MApPYnRhaW4gYXZlcmFnZSBhZ2Ugb2YgdGhlIHRvcCA1MAoKCmBgYHtyfQpHZW5kZXJCcmVha2Rvd24gPC0gRGlyZWN0b3JMaXN0ICU+JSBjb3VudChHZW5kZXIpCkF2Z0FnZSA8LSBEaXJlY3Rvckxpc3QgJT4lIHN1bW1hcmlzZShtZWFuKGBBZ2VfQXNfIE9mX0RlY18zMV8yMDI0YCwgbmEucm0gPSBUUlVFKSkKQXZnVGVudXJlIDwtIERpcmVjdG9yTGlzdCAlPiUgc3VtbWFyaXNlKG1lYW4oYFllYXJzT25Cb2FyZGAsIG5hLnJtID0gVFJVRSkpCkZ1bmRHcm91cHMgPC0gRGlyZWN0b3JMaXN0ICU+JSAgYXJyYW5nZShkZXNjKEZ1bmRCb2FyZCkpICU+JSBncm91cF9ieShGdW5kQm9hcmQpCmBgYAo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyfQ0KbGlicmFyeSh0aWR5dmVyc2UpDQoNCmRhdGEgPC0gcmVhZF9jc3YoIkRhdGEvVGVudXJlZC5jc3YiKQ0KDQoNCmBgYA0KDQpHZXQgdGhlIHRvcCA1MCBtb3N0IHRlbnVyZWQgbmFtZXMsIHJlbW92aW5nIGR1cGxpY2F0ZSBuYW1lcw0KDQpHZXQgdGhlIHRvcCA3NSB3aXRoIGR1cGxpY2F0ZXMNCg0KR2V0IG9ubHkgdGhlIGxpc3Qgb2YgZHVwbGljYXRlcw0KDQpgYGB7cn0NCkRpcmVjdG9yTGlzdCA8LSBkYXRhICU+JQ0KICBhcnJhbmdlKGRlc2MoWWVhcnNPbkJvYXJkKSkgJT4lDQogIGRpc3RpbmN0KE5hbWUsIC5rZWVwX2FsbCA9IFRSVUUpICU+JQ0KICBzbGljZV9oZWFkKG4gPSA1MCkNCg0Kd2l0aER1cGxpY2F0ZXMgPC0gZGF0YSAlPiUNCiAgYXJyYW5nZShkZXNjKFllYXJzT25Cb2FyZCkpICU+JQ0KICBzbGljZV9oZWFkKG4gPSA3NSkNCg0Kb25seUR1cGxpY2F0ZXMgPC0gd2l0aER1cGxpY2F0ZXMgJT4lIA0KICBncm91cF9ieShOYW1lKSAlPiUNCiAgZmlsdGVyKG4oKSA+IDEpICU+JQ0KICB1bmdyb3VwKCkNCg0KYGBgDQoNCkdldCBnZW5kZXIgYnJlYWtkb3duIGluIHRoZSB0b3AgNTANCk9idGFpbiBhdmVyYWdlIGFnZSBvZiB0aGUgdG9wIDUwDQoNCmBgYHtyfQ0KR2VuZGVyQnJlYWtkb3duIDwtIERpcmVjdG9yTGlzdCAlPiUgY291bnQoR2VuZGVyKQ0KQXZnQWdlIDwtIERpcmVjdG9yTGlzdCAlPiUgc3VtbWFyaXNlKG1lYW4oYEFnZV9Bc18gT2ZfRGVjXzMxXzIwMjRgLCBuYS5ybSA9IFRSVUUpKQ0KQXZnVGVudXJlIDwtIERpcmVjdG9yTGlzdCAlPiUgc3VtbWFyaXNlKG1lYW4oYFllYXJzT25Cb2FyZGAsIG5hLnJtID0gVFJVRSkpDQpGdW5kR3JvdXBzIDwtIERpcmVjdG9yTGlzdCAlPiUgIGFycmFuZ2UoZGVzYyhGdW5kQm9hcmQpKSAlPiUgZ3JvdXBfYnkoRnVuZEJvYXJkKQ0KYGBgDQoNCkNyZWF0ZXMgbGlzdCBvZiBldmVyeW9uZSBhZmZpbGlhdGVkIHdpdGggYW4gYXVkaXQgY29tbWl0dGVlIGFuZCB0aGVuIGEgYnJlYWtkb3duIG9mIGVhY2ggaW4gQXVkaXRUYWJsZQ0KYGBge3J9DQpBdWRpdENvbW1pdHRlZSA8LSBEaXJlY3Rvckxpc3QgJT4lIGZpbHRlcighaXMubmEoQXVkaXRfQ29tbWl0dGVlKSAmIEF1ZGl0X0NvbW1pdHRlZSAhPSAiIikNCkF1ZGl0VGFibGUgIDwtIERpcmVjdG9yTGlzdCAlPiUgY291bnQoQXVkaXRfQ29tbWl0dGVlKQ0KIyBBdWRpdENvbW1pdHRlZSA8LSBBdWRpdENvbW1pdHRlZSAlPiUgc2xpY2UoLTM0KQ0KDQpgYGA=</div>
 
 
 

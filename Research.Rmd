@@ -38,10 +38,17 @@ onlyDuplicates <- withDuplicates %>%
 Get gender breakdown in the top 50
 Obtain average age of the top 50
 
-
 ```{r}
 GenderBreakdown <- DirectorList %>% count(Gender)
 AvgAge <- DirectorList %>% summarise(mean(`Age_As_ Of_Dec_31_2024`, na.rm = TRUE))
 AvgTenure <- DirectorList %>% summarise(mean(`YearsOnBoard`, na.rm = TRUE))
 FundGroups <- DirectorList %>%  arrange(desc(FundBoard)) %>% group_by(FundBoard)
+```
+
+Creates list of everyone affiliated with an audit committee and then a breakdown of each in AuditTable
+```{r}
+AuditCommittee <- DirectorList %>% filter(!is.na(Audit_Committee) & Audit_Committee != "")
+AuditTable  <- DirectorList %>% count(Audit_Committee)
+# AuditCommittee <- AuditCommittee %>% slice(-34)
+
 ```
