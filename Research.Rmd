@@ -12,19 +12,26 @@ data <- read_csv("Data/Tenured.csv")
 
 ```
 
-Get the top 50 most tenured names, removing duplicate names
+Get the top 50 most tenured names, removing duplicate names and the names of retired/problem directors that need to be cleaned out
 
 Get the top 75 with duplicates
 
 Get only the list of duplicates
 
 ```{r}
+
 DirectorList <- data %>%
   arrange(desc(YearsOnBoard)) %>%
   distinct(Name, .keep_all = TRUE) %>%
+  filter(!Name %in% c("Howard J. Johnson", "M. Yaqub Mirza , PhD", "Edward I. Altman", "Kenneth A. Himmel")) %>%
   slice_head(n = 50)
 
-DirectorList <- DirectorList %>% select(-DirectorId, -ComplexId, -FundBoardId, -blank, -blankik)
+# DirectorList <- data %>%
+#   arrange(desc(YearsOnBoard)) %>%
+#   distinct(Name, .keep_all = TRUE) %>%
+#   slice_head(n = 50)
+
+# DirectorList <- DirectorList %>% select(-DirectorId, -ComplexId, -FundBoardId, -blank, -blankik)
 
 
 withDuplicates <- data %>%
