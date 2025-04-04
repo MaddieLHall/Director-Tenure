@@ -8,7 +8,7 @@ output: html_notebook
 library(tidyverse)
 
 data <- read_csv("Data/Tenured.csv")
-
+auditData <- read_csv("Data/auditData.csv")
 
 ```
 
