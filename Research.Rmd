@@ -10,7 +10,7 @@ output:
 ```{r}
 library(tidyverse)
 
-data <- read_csv("Data/Tenured.csv")
+data <- read_csv("Data/please1.csv")
 auditData <- read_csv("Data/auditData.csv")
 
 ```
