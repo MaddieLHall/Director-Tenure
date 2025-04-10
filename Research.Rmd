@@ -1,6 +1,9 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  word_document: default
+  html_notebook: default
+  pdf_document: default
 ---
 
 
@@ -20,10 +23,13 @@ Get only the list of duplicates
 
 ```{r}
 
+data <- data %>%
+  mutate(YearsOnBoard = as.numeric(as.character(YearsOnBoard)))
+
 DirectorList <- data %>%
   arrange(desc(YearsOnBoard)) %>%
   distinct(Name, .keep_all = TRUE) %>%
-  filter(!Name %in% c("Howard J. Johnson", "M. Yaqub Mirza , PhD", "Edward I. Altman", "Kenneth A. Himmel")) %>%
+  filter(!Name %in% c("Howard J. Johnson", "M. Yaqub Mirza , PhD", "Edward I. Altman", "Kenneth A. Himmel", "Joni Evans")) %>%
   slice_head(n = 50)
 
 # DirectorList <- data %>%
@@ -53,6 +59,8 @@ GenderBreakdown <- DirectorList %>% count(Gender)
 AvgAge <- DirectorList %>% summarise(mean(`Age_As_ Of_Dec_31_2024`, na.rm = TRUE))
 AvgTenure <- DirectorList %>% summarise(mean(`YearsOnBoard`, na.rm = TRUE))
 FundGroups <- DirectorList %>%  arrange(desc(FundBoard)) %>% group_by(FundBoard)
+AvgTenureAll <- data %>% summarise(mean(`YearsOnBoard`, na.rm = TRUE))
+
 ```
 
 Creates list of everyone affiliated with a committee and then a breakdown of each in a table. Also does the same for the chairs/board positions
@@ -70,4 +78,27 @@ NGTable <- DirectorList %>% count(Nominating_Governance_Committee)
 
 ContractCommittee <- DirectorList %>%  filter(!is.na(Contract_Committee) & Contract_Committee != "")
 ContractTable <- DirectorList %>% count(Contract_Committee)
+
+```
+
+
+```{r}
+
+
+dataFundClean <- data %>%
+  mutate(FundBoard = if_else(str_detect(FundBoard, 
+    "Franklin Templeton|Putnam|Royce|Martin Currie|Western Asset|Lexington|Clarion|Clearbridge|Brandywine"),
+    "Franklin Templeton ADJ", FundBoard))
+
+dataFundClean <- data %>%
+  mutate(FundBoard = if_else(str_detect(FundBoard, 
+    "BNY"),"BNY ADJ", FundBoard))
+
+dataFundClean <- dataFundClean %>%
+  mutate(YearsOnBoard = as.numeric(as.character(YearsOnBoard)))
+
+
+FundTenure <- dataFundClean %>% group_by(FundBoard) %>% summarise(AvgYearsOnBoard = mean(YearsOnBoard, na.rm = TRUE))
+
+
 ```
