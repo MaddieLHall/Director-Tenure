@@ -10,7 +10,7 @@ output:
 ```{r}
 library(tidyverse)
 
-data <- read_csv("Data/please1.csv")
+data <- read_csv("Data/testtest.csv")
 auditData <- read_csv("Data/auditData.csv")
 
 ```
@@ -29,7 +29,7 @@ data <- data %>%
 DirectorList <- data %>%
   arrange(desc(YearsOnBoard)) %>%
   distinct(Name, .keep_all = TRUE) %>%
-  filter(!Name %in% c("Howard J. Johnson", "M. Yaqub Mirza , PhD", "Edward I. Altman", "Kenneth A. Himmel", "Joni Evans")) %>%
+  filter(!Name %in% c("Howard J. Johnson", "M. Yaqub Mirza , PhD", "Edward I. Altman", "Kenneth A. Himmel", "Joni Evans","Anthony J. Colavita")) %>%
   slice_head(n = 50)
 
 # DirectorList <- data %>%
@@ -86,19 +86,25 @@ ContractTable <- DirectorList %>% count(Contract_Committee)
 
 
 dataFundClean <- data %>%
+  mutate(FundBoard = case_when(
+    str_detect(FundBoard, "Franklin Templeton|Putnam|Royce|Martin Currie|Western Asset|Lexington|Clarion|Clearbridge|Brandywine|Legg") ~ "Franklin Templeton ADJ",
+    str_detect(FundBoard, "BNY") ~ "BNY ADJ",
+    TRUE ~ FundBoard
+  ))
+
+# dataFundClean <- dataFundClean %>%
+#   mutate(YearsOnBoard = as.numeric(as.character(YearsOnBoard)))
+
+dirListClean <- DirectorList %>%
   mutate(FundBoard = if_else(str_detect(FundBoard, 
-    "Franklin Templeton|Putnam|Royce|Martin Currie|Western Asset|Lexington|Clarion|Clearbridge|Brandywine"),
+    "Franklin Templeton|Putnam|Royce|Martin Currie|Western Asset|Lexington|Clarion|Clearbridge|Brandywine|Legg"),
     "Franklin Templeton ADJ", FundBoard))
-
-dataFundClean <- data %>%
-  mutate(FundBoard = if_else(str_detect(FundBoard, 
-    "BNY"),"BNY ADJ", FundBoard))
-
-dataFundClean <- dataFundClean %>%
-  mutate(YearsOnBoard = as.numeric(as.character(YearsOnBoard)))
 
 
 FundTenure <- dataFundClean %>% group_by(FundBoard) %>% summarise(AvgYearsOnBoard = mean(YearsOnBoard, na.rm = TRUE))
 
+allGenderBreakdown <- dataFundClean %>% count(Gender)
+nonchairs <- dirListClean %>% 
+  filter(!Position_With_Fund %in% c("Lead Independent Director", "Lead independent director", "Chairman"))
 
 ```
